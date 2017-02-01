@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sca:composite xmlns:xmi="http://www.omg.org/XMI" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:property="http://ns.tibco.com/bw/property" xmlns:filepersistence="http://xsd.tns.tibco.com/bw/models/binding/soap/filepersistence" xmi:version="2.0" xmi:id="_RWdU8IF3EeaDU6T8_KZC2w" targetNamespace="http://tns.tibco.com/bw/composite/TestPlugin-module" name="TestPlugin-module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+    <sca:service xmi:id="_gQ4LInjnAKPJgKOatr6jgw" name="getService" promote="soapActionComponent/getService">
+        <sca:interface.wsdl xmi:id="_OZUNkMh0Eea2gbRYRTtYvg" interface="www.fastconnec.org#wsdl.interface(serviceSoap)" scaext:wsdlLocation="../Service%20Descriptors/serviceSoap.wsdl"/>
+        <scaext:binding xmlns:wsdl_soapAction="www.fastconnec.org" xsi:type="axis2:SOAPServiceBinding" xmi:id="_Ps1q8Mh0Eea2gbRYRTtYvg" name="soapActionServiceBinding" targetNamespace="http://www.tibco.com/4f35c9b47a44493ca270698480f4693a/SOAPServiceBinding" portTypeQName="wsdl_soapAction:serviceSoap" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/TestPlugin-module/Service%20Descriptors/serviceSoap.wsdl">
+            <bindingType xmi:id="_Ps2SAMh0Eea2gbRYRTtYvg"/>
+            <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_Rfab0Mh0Eea2gbRYRTtYvg" endpointURI="/SOAPServiceBinding/getService/" httpConnector="http.httpConnection"/>
+            <operationConfiguration xmi:id="_Ps2SAch0Eea2gbRYRTtYvg" operationName="operation" action="operation" actionNeeded="true">
+                <bindingType xmi:id="_Ps2SAsh0Eea2gbRYRTtYvg"/>
+                <messageConfiguration xmi:id="_Ps2SA8h0Eea2gbRYRTtYvg" messageQName="wsdl_soapAction:operationRequest" wsdlLocation="platform:/resource/TestPlugin-module/Service%20Descriptors/serviceSoap.wsdl">
+                    <messagePartConfigurations xmlns:schema_1482143113890="http://www.example.org/schema/1482143113890" xsi:type="axis2:BodyPartConfiguration" xmi:id="_Ps2SBMh0Eea2gbRYRTtYvg" partName="parameters" partElementName="schema_1482143113890:operationRequest"/>
+                </messageConfiguration>
+                <messageConfiguration xmi:id="_Ps2SBch0Eea2gbRYRTtYvg" messageQName="wsdl_soapAction:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/TestPlugin-module/Service%20Descriptors/serviceSoap.wsdl">
+                    <messagePartConfigurations xmlns:schema_1482143113890="http://www.example.org/schema/1482143113890" xsi:type="axis2:BodyPartConfiguration" xmi:id="_Ps2SBsh0Eea2gbRYRTtYvg" partName="parameters" partElementName="schema_1482143113890:operationResponse"/>
+                </messageConfiguration>
+                <context xmi:id="_Ps2SB8h0Eea2gbRYRTtYvg">
+                    <inputMapping xmi:id="_Ps2SCMh0Eea2gbRYRTtYvg"/>
+                    <outputMapping xmi:id="_Ps2SCch0Eea2gbRYRTtYvg" direction="OUTPUT"/>
+                </context>
+            </operationConfiguration>
+        </scaext:binding>
+        <scact:bindingAdjunct xmi:id="_Ps2SCsh0Eea2gbRYRTtYvg" bindingName="soapActionServiceBinding"/>
+    </sca:service>
+    <sca:property xmi:id="_RcwKMIF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc2Q0IF3EeaDU6T8_KZC2w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc2Q0YF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc8XcIF3EeaDU6T8_KZC2w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_Rc8XcYF3EeaDU6T8_KZC2w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEIF3EeaDU6T8_KZC2w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEYF3EeaDU6T8_KZC2w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdCeEoF3EeaDU6T8_KZC2w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_RdIksIF3EeaDU6T8_KZC2w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+    <sca:property xmi:id="_H9UROfR6a2OQZMHnKz5piQ" name="/JMSCONNECTION/QueueReceiveMessage" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_WqXrpDasG502CryShBWNvr" name="/FCLOG/CONNECTION/JDBC/DRIVER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_WDhAsZxTSnrWwOqu1oHtdY" name="/FCLOG/CONNECTION/JDBC/URL" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_1tK3Oi3Z45xnjTNLbdq3Sm" name="/FCLOG/CONNECTION/JDBC/USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_gdbLzVJRQOMgV5X987m9L2" name="/FCLOG/CONNECTION/JDBC/PASSWORD" type="property:password" scalable="true" publicAccess="true" scaext:simpleValue="#!vniNW3mg9O8fQtrZ9SjUkw=="/>
+    <sca:property xmi:id="_0oxRQVTbfoHDulVYd5X2xj" name="/FCLOG/CONNECTION/JMS/URL" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_pzVviZzFbILzHBEm9zy8FY" name="/FCLOG/CONNECTION/JMS/USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_MRCmaXSq4V3j1UCMMV7Wt9" name="/FCLOG/CONNECTION/JMS/PASSWORD" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_FVlDdfcz6O4hDGKaHM7kFh" name="/FCLOG/CONNECTION/JMS/QUEUELOG" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_MuyfGuUWFX5oU8vZOXm1GU" name="/FCLOG/CONNECTION/JMS/JNDI_TOPIC_CONNECTION_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_Kc5guwyM2mNETT7NHP3ARS" name="/FCLOG/CONNECTION/JMS/JNDI_QUEUE_CONNECTION_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_bpubZlA2ge5VBcmp6A7QEj" name="/FCLOG/CONNECTION/JMS/JNDI_PASSWORD" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_g65dRpdRr0LstcTxtkAcdc" name="/FCLOG/CONNECTION/JMS/JNDI_CONTEXT_FACTORY" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:property xmi:id="_JRoXWVlPy7xHAP1NuhaHf9" name="/FCLOG/CONNECTION/JMS/JNDI_USER" type="XMLSchema:string" scalable="true" publicAccess="true"/>
+    <sca:component xmi:id="_gCy4aoqVJ7oohFEske0Rpp" name="soapActionComponent" compositeext:version="1.0.0.qualifier">
+        <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_KXLX8ZnSBIoNqYwXwl32bA" processName="test.plugin.soap.soapAction"/>
+        <sca:service xmi:id="_OZP8IMh0Eea2gbRYRTtYvg" name="getService">
+            <sca:interface.wsdl xmi:id="_OZQjMMh0Eea2gbRYRTtYvg" interface="www.fastconnec.org#wsdl.interface(serviceSoap)" scaext:wsdlLocation="../Service%20Descriptors/serviceSoap.wsdl"/>
+        </sca:service>
+    </sca:component>
+    <sca:component xmi:id="_qhcA0N8V0xE9rmOYWbG9iX" name="SoapActionComponent" compositeext:version="1.0.0.qualifier">
+        <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_gBReml42R1MYVeg3MHW2JW" processName="fc.soap.test.SoapAction"/>
+        <sca:service xmi:id="_OZP8IMh0Eea2gbRYRTtYvg" name="getService">
+            <sca:interface.wsdl xmi:id="_OZQjMMh0Eea2gbRYRTtYvg" interface="www.fastconnect.org/testPugin#wsdl.interface(Service)" scaext:wsdlLocation="../Service%20Descriptors/Service.wsdl"/>
+        </sca:service>
+    </sca:component>
+</sca:composite>

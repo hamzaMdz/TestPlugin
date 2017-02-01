@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://www.fastconnect.com/namespaces/tns/1480431399476" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.example.com/namespaces/tns/1481108382510" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="bwException">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="1" minOccurs="0" name="code" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="0" name="desc" type="xsd:string"/>
+        <xsd:element maxOccurs="1" minOccurs="1" name="type" type="xsd:string"/>
+                <xsd:element name="stackeTrace" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

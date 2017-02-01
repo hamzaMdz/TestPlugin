@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://www.fastconnect.com/namespaces/tns/1480332183563" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.example.com/namespaces/tns/1481108382510" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="input">
+    <xsd:complexType>
+      <xsd:sequence>
+                <xsd:element name="bwBuildError"  minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="eventException">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="code" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="desc" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="shortDesc" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="serverity" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="stackeTrace" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="inputData" type="xsd:string" minOccurs="0" />
+                    <xsd:element maxOccurs="1" minOccurs="0" name="debugData" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+                <xsd:element name="syncResponseBody">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Error" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

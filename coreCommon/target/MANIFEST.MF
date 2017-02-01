@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .
+TIBCO-BW-SharedModule: META-INF/module.bwm
+Bundle-Name: coreCommon Module
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.pal
+ ette; filter:="(name=bw.fclog)",com.tibco.bw.palette; filter:="(name=
+ bw.jms)",com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconn
+ ection)"
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-Version: 6.3.3 V23 2016-08-10
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Provide-Capability: com.tibco.bw.module; name="coreCommon"; version:Ve
+ rsion="1.1.0",com.tibco.bw.schemas; ns="http://www.fastconnect.com/na
+ mespaces/tns/1480332183563",com.tibco.bw.schemas; ns="http://www.fast
+ connect.com/namespaces/tns/1480343685066",com.tibco.bw.schemas; ns="h
+ ttp://www.fastconnect.com/namespaces/tns/1480431399476",com.tibco.bw.
+ schemas; ns="http://www.fastconnect.com/namespaces/tns/1481108382510"
+ ,com.tibco.bw.schemas; ns="http://www.fastconnect.com/namespaces/tns/
+ 1481108983846",com.tibco.bw.processes; name="ErrorPackage",com.tibco.
+ bw.resources; name="jms",com.tibco.bw.processes; name="SubProcess"
+Bundle-Version: 1.1.0.201701312055
+Bundle-ManifestVersion: 2
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+Bundle-SymbolicName: coreCommon
+
