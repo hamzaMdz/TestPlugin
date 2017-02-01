@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fc.tibco.test.bw6</groupId>
     <artifactId>TestPlugin-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>TestPlugin</module>
@@ -12,7 +12,7 @@
         <connection>scm:git:git://github.com/hamzaMdz/TestPlugin</connection>
         <developerConnection>scm:git:git@github.com:hamzaMdz/TestPlugin</developerConnection>
         <url>https://github.com/hamzaMdz/TestPlugin</url>
-      <tag>TestPlugin-parent-1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
     <build>
         <plugins>
